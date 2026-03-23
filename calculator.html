@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Calculator</title>
+      <style>
+        button{
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 100px;
+            
+            
+        }
+        .plus{
+            
+               padding: 0px 4.5px;
+                 background: #ff9500; /* orange */
+        }
+        .percent{
+            padding: 1px 2.9px;
+            
+        }
+        .dot{
+            padding: 0px 6.5px;
+            border-radius: 100px;
+               margin-left: 2.9px;
+        }
+        .equal{
+            padding: 1px 4.5px;
+              border-radius: 90px;
+              margin-left: 10px;
+
+
+        }
+        .ac{
+            font-size: 15px;
+            border-radius: 100px;
+              padding: 4.5px 3.5px;
+                background: #ff9500; /* orange */
+        }
+        .plusorminus{
+            font-size: 20px;
+            border-radius: 100px;
+              padding: 4.5px 4.5px;
+              margin-left: 5px;
+                background: #ff9500; /* orange */
+        }
+        .backspace{
+            font-size: 15px;
+            border-radius: 100px;
+             padding: 3px 3.5px;
+             margin-left: 12px;
+               background: #ff9500; /* orange */
+
+        }
+        .divide{
+          font-size: 20px;
+            border-radius: 100px;
+             padding: 1.2px 6.5px;
+               background: #ff9500; /* orange */
+
+        }
+        body {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+button {
+  background: rgba(255,255,255,0.1);
+  color: white;
+  backdrop-filter: blur(10px);
+}
+
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+.calculator {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+}
+button {
+  width: 60px;
+  height: 60px;
+  margin: 8px;
+  border-radius: 50%;
+  border: none;
+
+  font-size: 18px;
+  color: white;
+
+  background: rgba(255, 255, 255, 0.1);
+}
+
+
+.equal {
+  background: #34c759; /* green */
+}
+.multiply{
+      background: #ff9500; /* orange */
+      font-size: 25px;
+}
+
+      </style>
+
+    </head>
+
+
+    <body >
+        <div class="calculator">
+  <!-- all buttons here -->
+   <p>
+            <button onclick="console.clear()" class="ac">AC</button>
+          <button onclick="alert('+/-');" class="plusorminus">
+            +/-
+        </button>
+        <button onclick="
+  calculation = calculation.slice(0, -1);
+  if (calculation === '') {
+    calculation = '0';
+  }
+  console.log(calculation);
+" class="backspace">
+  ⌫
+</button>
+          <button onclick="calculation+=' / ';console.log(calculation); "class="divide">
+            /
+        </button>
+
+        </p>
+        <p>
+        <button onclick="calculation+='7';console.log(calculation);">
+            7
+        </button>
+         <button onclick="calculation+='8';console.log(calculation);">
+            8
+        </button>
+        <button onclick="calculation+='9';console.log(calculation);">
+            9
+        </button>
+        <button onclick="calculation+=' * ';console.log(calculation);" class="multiply">
+            *
+        </button>
+</p>
+<p>
+        <button onclick="calculation+='4';console.log(calculation);">
+            4
+        </button>
+         <button onclick="calculation+='5';console.log(calculation);">
+            5
+        </button>
+        <button onclick="calculation+='6';console.log(calculation);">
+            6
+        </button>
+        <button onclick="calculation+=' - ';console.log(calculation);" class="multiply">
+            -
+        </button>
+</p>
+
+<p>
+        <button onclick="calculation+='1';console.log(calculation);">
+            1
+        </button>
+         <button onclick="calculation+='2';console.log(calculation);">
+            2
+        </button>
+        <button onclick="calculation+='3';console.log(calculation);">
+            3
+        </button>
+        <button onclick="calculation+=' + ';console.log(calculation); "class="plus">
+            +
+        </button>
+</p>
+<p>
+ <button onclick="calculation+=' % ';console.log(calculation);" class="percent">
+            %
+        </button>
+        <button onclick="calculation+='0';console.log(calculation);">
+            0
+        </button>
+        <button onclick="calculation+='.';console.log(calculation);" class="dot">
+            .
+        </button>
+          <button onclick="calculation=eval(calculation); console.log(calculation); alert(calculation);" class="equal">
+            =
+        </button>
+</p>
+</div>
+    </body>
+    <script>
+        let calculation='';
+        window.onload = function() {
+  alert("Open console (F12) to see results");
+  console.log("Calculator started...");
+};
+   </script>
+   
+</html>
